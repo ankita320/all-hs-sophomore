@@ -1,0 +1,17 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname pset) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+(define FriendlyEnergy
+  (lambda (n)
+    (cond
+      ((and (<= n 50)(>= n 0)) (+ 15.95 (* .33 n)))
+      ((> n 50)(+ 15.95 (* .33 50) (* .27 (- n 50))))
+      )))
+(FriendlyEnergy 150)
+
+(/ (+ (sqrt 4) (- 8 (* 7 2))) (- 6 (expt 3 2)))
+
+(define x 10)
+(if (> (+ x 3) 5)
+    (- x 4)
+   

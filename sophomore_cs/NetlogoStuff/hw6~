@@ -1,0 +1,63 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname hw6) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+;cw
+(define gradeConverter
+  (lambda (grade)
+    (if(and (>= grade 90) (<= grade 100))
+       (display "A")
+       (if (and (>= grade 80) (<= grade 100)
+                )
+           (display "B")
+           (if (and (>= grade 70) (<= grade 79))
+               (display "C")
+               (if (and (>= grade 65) (<= grade 69))
+                   (display "D")
+                   (if (and (>= grade 0)(<= grade 64))
+                       (display "F")
+                       (display "invalid"))))))))
+                       
+    (gradeConverter 88)
+
+(newline)
+                         
+
+(define GRADE
+  (lambda (M1 M2 M3 M4)
+    (if (< (/ (+ M1 M2 M3 M4) 4) 50)
+        (display "FAIL")
+        (display "PASS"))))
+(GRADE 45 86 23 90)
+
+
+
+
+;hw
+(newline)
+(define facesMoney
+  (lambda (f)
+    (if (= f 1)
+        (display "George Washington")
+         (if (= f 1)
+        
+        (display "Thomas Jefferson")
+        (if (= f 5)
+      
+       
+        (display "Abraham Lincoln")
+        
+        (if (= f 10)
+        (display "Alexander Hamilton")
+        (if (= f 20)
+            
+        (display "Andrew Jackson")
+        (if (= f 50)
+        (display "Ulysses S. Grant")
+         (if (= f 100)
+        (display "Benjamin Franklin")
+        (display "not found")
+        )))))))))
+(facesMoney 50)
+       
+       
+       

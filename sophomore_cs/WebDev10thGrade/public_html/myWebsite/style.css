@@ -1,0 +1,39 @@
+ th,td {
+	background-color: #C7EBF0;
+	border-style: groove;
+	border-width: 3px;
+	border-color: #3CDBD3;
+	}
+	
+table {
+	border-style: solid;
+	border-width:2px;
+	border-color: blue;
+	}
+	
+
+h1 {
+	color:white;
+	background-color: purple;
+	font-size: 60px;
+	text-align: center;
+	font-family: 'Fredericka the Great', cursive;
+	}
+	
+p {
+	text-indent: 5px;}
+	
+#navbar {
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+	display:inline;
+	width: 60px;
+	background-color: #dddddd
+}
+
+
+li {
+	display: inline;
+	}
+

@@ -1,0 +1,34 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname cw8) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+(define ringAreaBig
+  (lambda (r t)
+    (*(expt (+ r t) 2) pi)
+    ))
+
+
+(define ringAreaSmall
+  (lambda (r)
+    (*(expt r 2) pi)
+    ))
+
+(define shadedAreas
+  (lambda (r1 t1)
+    (* 2 (abs ( - (ringAreaBig r1 t1) (ringAreaSmall r1))))
+    ))
+
+(define circOuter
+  (lambda (r l t)
+    (* (* (* (+ r t) 2) pi) l)
+              ))
+
+
+(define circInner
+  (lambda (r l)
+    (* (* (* r 2) pi) l)
+              ))
+
+(+ (circInner 2 3) (circOuter 2 3 4) (shadedAreas 2 4))
+
+
+

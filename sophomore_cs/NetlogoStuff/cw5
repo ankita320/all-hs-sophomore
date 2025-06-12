@@ -1,0 +1,20 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname cw5) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(or #t #f)
+(and #f (not (> 2 5)))
+
+(define isBetween
+  (lambda (a b c)
+         (and (> b a) (> c b))
+              )
+  )
+(isBetween 3 4 5)
+
+;Triples
+(define isPythTriple?
+  (lambda (a b c)
+    (= (+ (expt a 2) (expt b 2)) (expt c 2))
+    )
+  )
+  (isPythTriple? 6 8 10)

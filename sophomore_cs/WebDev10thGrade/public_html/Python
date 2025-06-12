@@ -1,0 +1,13 @@
+wordFreq = {
+        "Hello": 56,
+        "at": 23,
+        "test": 43,
+        "this": 78
+    }
+
+wordsToAdd = ["test","Hello","fish","bacon","bacon","fish","at","bacon","bacon",
+              "fish","kevin",'test',"Hello","fish","bacon","bacon","fish","at",
+              "bacon","kevin","bacon","kevin","bacon"]
+#Write loop here!
+
+print(wordFreq)

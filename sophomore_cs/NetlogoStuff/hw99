@@ -1,0 +1,46 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname hw99) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+
+(define isLeapYear?
+  (lambda (year)
+    (cond
+      ((= (modulo year 400) 0) #t)
+      ((= (modulo year 100) 0) #f)
+      ((= (modulo year 4) 0) #t)
+      (else #f)
+      )))
+(isLeapYear? 2001)
+
+(define daysInMonth
+  (lambda (month year)
+   (cond    
+    ((and (or (not (and #f (isLeapYear? year))) (and #t (isLeapYear? year))) (or (= month 1) (= month 3) (= month 5) (= month 7) (= month 8) (= month 10) (= month 12))) 31)
+    ((and (or (not (and #f (isLeapYear? year))) (and #t (isLeapYear? year))) (or (= month 4) (= month 6) (= month 9) (= month 11))) 30)
+    ((and (and #t (isLeapYear? year)) (= month 2)) 29)
+    ((and (not (and #f (isLeapYear? year))) (= month 2)) 28)
+    (else (display "error")))))
+ 
+(daysInMonth 2 2012)    
+(daysInMonth 1 2010) 
+(daysInMonth 2 2011) 
+(daysInMonth 2 2000) 
+(daysInMonth 4 2011)
+
+
+(define daysInMonth1
+  (lambda (month year)
+   (cond    
+    ((or (= month 1) (= month 3) (= month 5) (= month 7) (= month 8) (= month 10) (= month 12)) 31)
+    ((or (= month 4) (= month 6) (= month 9) (= month 11)) 30)
+    ((and (isLeapYear? year) (= month 2)) 29)
+    (else 28)
+    )))
+ 
+(daysInMonth1 2 2012)    
+(daysInMonth1 1 2010) 
+(daysInMonth1 2 2011) 
+(daysInMonth1 2 2000) 
+(daysInMonth1 4 2011)
+
+

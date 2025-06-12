@@ -1,0 +1,49 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname hw10cw10) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+(define countdown
+  (lambda (n)
+    (if (= n 0)
+        (begin
+        (newline)
+        (display "Blastoff!!"))
+        (begin
+          (display n)
+          (newline)
+          (countdown (- n 1))))))
+(countdown 5)
+
+(define cookie
+  (lambda (c)
+    (if (= c 0)
+        (begin
+          (newline)
+          (display "Do you have more cookies, I am still hungry!"))
+        (begin
+          (newline)
+          (display "Munch Munch Yum Yum Cookie ")
+          (display c)
+          (cookie (- c 1))))))
+        
+(cookie 5)
+
+
+(define timesTable
+  (lambda (num t)
+    (if (< t 13)
+        (begin
+          (newline)
+          (display num)
+          (display "x")
+          (display t)
+          (display "=")
+          (display (* num t))
+          (newline)
+          (timesTable num (+ t 1)))
+    (display " "))))
+
+(timesTable 5 1)
+                   
+          
+          
+          

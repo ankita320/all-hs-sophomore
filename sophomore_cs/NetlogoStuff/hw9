@@ -1,0 +1,38 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname hw9) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+
+
+(define evennum
+  (lambda (num)
+    (if (= (modulo num  2) 0)
+        #t #f)))
+(evennum 8)
+
+
+(define isLeapYr?
+  (lambda (year)
+    (cond
+      ((= 0 (modulo year 400)) #t)
+      ((= 0 (modulo year 100)) #f)
+      ((= 0 (modulo year 4)) #t)
+      (else #f))))
+
+      
+(isLeapYr? 1976)
+
+(define daysInMonth
+  (lambda (month year)
+   (cond
+    ((and (= #f (isLeapYear? year) (or (= month 1))) 31)
+    ((and (= #f (isLeapYear? year) (= month 1))) 29)
+    ((and (= #f (isLeapYear? year) (= month 1))) 31)
+    ((and (= #f (isLeapYear? year) (= month 1))) 30)
+    ((and (= #f (isLeapYear? year) (= month 1))) 31)
+    ((and (= #f (isLeapYear? year) (= month 1))) 30)
+    ((and (= #f (isLeapYear? year) (= month 1))) 31)
+    ((and (= #f (isLeapYear? year) (= month 1))) 30)
+    ((and (= #f (isLeapYear? year) (= month 1))) 31)
+    ((and (= #f (isLeapYear? year) (= month 1))) 30)
+    ((and (= #f (isLeapYear? year) (= month 1))) 31)
+    
